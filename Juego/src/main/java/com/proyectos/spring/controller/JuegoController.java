@@ -15,7 +15,7 @@ import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 @RestController
 public class JuegoController {
 
-	@CircuitBreaker(name = "Juego Circuit Breaker", fallbackMethod = "fallBackListJuegos")
+//	@CircuitBreaker(name = "Juego Circuit Breaker", fallbackMethod = "fallBackListJuegos")
 	@GetMapping("/juego")
 	public List<Juego> getJuegos() throws Exception {
 		List<Juego> juegos = new ArrayList<Juego>();
@@ -24,11 +24,11 @@ public class JuegoController {
 		juegos.add(new Juego("eqrwerqwer", 2001));
 		juegos.add(new Juego("xcvbxcvbc", 5002));
 
-		throw new Exception();
+//		throw new Exception();
 		return juegos;
 	}
 
-	private ResponseEntity<List<Juego>> fallBackListJuegos() {
-		return new ResponseEntity<List<Juego>>(new ArrayList<Juego>(), HttpStatus.INTERNAL_SERVER_ERROR);
-	}
+//	private ResponseEntity<List<Juego>> fallBackListJuegos() {
+//		return new ResponseEntity<List<Juego>>(new ArrayList<Juego>(), HttpStatus.INTERNAL_SERVER_ERROR);
+//	}
 }
