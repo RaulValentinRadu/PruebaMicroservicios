@@ -8,7 +8,7 @@ spring:
         uri: juego
         predicates:
           - Path=/juego/**
-      - id: biblioteca
+      - id: Biblioteca
         uri: http://localhost:8888
         predicates:
           - Path=/biblioteca/**
