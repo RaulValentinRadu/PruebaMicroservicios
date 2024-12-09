@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  cloud: 
+   gateway: 
+    routes:
+      - id: juego
+        uri: lb://juego
+        predicates:
+          - Path=/product/**
+      - id: biblioteca
+        uri: biblioteca/
+        predicates:
+          - Path=/cart/**
