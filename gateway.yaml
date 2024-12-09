@@ -7,8 +7,8 @@ spring:
       - id: juego
         uri: lb://juego
         predicates:
-          - Path=/product/**
+          - Path=/juego/**
       - id: biblioteca
         uri: biblioteca/
         predicates:
-          - Path=/cart/**
+          - Path=/biblioteca/**
