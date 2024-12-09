@@ -11,4 +11,4 @@ spring:
       - id: biblioteca
         uri: http://localhost:8888
         predicates:
-          - Path=/**
+          - Path=/biblioteca/**
