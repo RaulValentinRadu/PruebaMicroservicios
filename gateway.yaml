@@ -6,11 +6,11 @@ spring:
    gateway: 
     routes:
       - id: juego
-        uri: http://localhost:7777
+        uri: juego
         predicates:
           - Path=/juego/**
       - id: biblioteca
-        uri: http://localhost:8888
+        uri: biblioteca
         predicates:
           - Path=/biblioteca/**
             
